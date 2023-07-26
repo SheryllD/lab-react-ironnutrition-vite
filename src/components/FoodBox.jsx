@@ -1,14 +1,19 @@
-<div>
-  <p>NAME</p>
+import React from "react"; 
 
-  <img src="IMAGE" />
+function FoodBox(props) {
+    const totalCal = props.foods.servings * props.food.calories; 
 
-  <p>Calories: CALORIES</p>
-  <p>Servings SERVINGS</p>
+return(
 
+<div className="food-info">
+  <p>{props.foods.name}</p>
+  <img src={props.foods.image} alt={props.foods.name} /> 
+  <p>Calories: {props.foods.calories}</p>
+  <p>Servings {props.foods.servings}</p>
   <p>
-    <b>Total Calories: SERVINGS * CALORIES </b> kcal
+    <b>Total Calories: {totalCal} </b> kcal
   </p>
-
-  <button>Delete</button>
+  <button onClick={() => props.deleteFoods(props.foods.id)}>Delete</button>
 </div>
+);
+}
