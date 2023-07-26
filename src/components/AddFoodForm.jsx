@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+/*
 function AddFoodForm(props) {
     const [image, setImage] = useState(""); 
     const [name, setName] = useState(""); 

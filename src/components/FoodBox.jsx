@@ -1,20 +1,19 @@
 import React from "react"; 
 
-function FoodBox(props) {
-    const totalCal = props.foods.servings * props.food.calories; 
-
-return(
-
-<div className="food-info">
-  <p>{props.foods.name}</p>
-  <img src={props.foods.image} alt={props.foods.name} /> 
-  <p>Calories: {props.foods.calories}</p>
-  <p>Servings {props.foods.servings}</p>
-  <p>
-    <b>Total Calories: {totalCal} </b> kcal
+function FoodBox({food, onDelete}) {
+//    const totalCal = props.oneFood.servings * props.oneFood.calories; 
+return (
+<col> 
+<card title={oneFood.name} style={{ width: 250, height: 300, margin 10 }}>
+<img src={oneFood.image} alt={oneFood.name} /> 
+<p>Calories: {oneFood.calories}</p>
+  <p>Servings: {oneFood.servings}</p>
+  <p>  <b>Total Calories: {oneFood.servings * oneFood.calories} </b> kcal
   </p>
-  <button onClick={() => props.deleteFoods(props.foods.id)}>Delete</button>
-</div>
+  <button onClick={() => onDelete (oneFood.id)}>Delete</button>
+</card>
+</col>
+
 );
 }
 
