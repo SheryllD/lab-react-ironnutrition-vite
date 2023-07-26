@@ -2,7 +2,7 @@ import "./App.css";
 import foodsJson from "./foods.json";
 import Foodbox from "./components/FoodBox"; 
 import { useState } from "react";
-import AddFoodForm from "./components/AddFoodForm"
+import AddFoodForm from "./components/AddFoodForm";
 
 function App() {
   const [foods, setFoods] = useState(foodsJson); 
