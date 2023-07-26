@@ -1,4 +1,5 @@
 import "./App.css";
+import foodsJson from "./foods.json";
 
 function App() {
   return (
